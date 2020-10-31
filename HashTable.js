@@ -24,16 +24,32 @@ class HashTable {
 
     let address = this._hash(key)
 
+    //let isPresent = this.checkPresent(key);
+
     if(!this.data[address]) {
 
       this.data[address] = [] 
 
-    } //else if(this.get(key) != value){
+    } 
+     if(!this.checkPresent(key)){
       this.data[address].push([key, value]) 
       // return this.data
-    //}
+    }
 
     return this.data
+
+  }
+
+  checkPresent(key) {
+
+    let keys = this.keys();
+
+    for(let i=0; i<keys.length; i++) {
+      if(keys[i] === key) {
+        return true;
+      }
+    }
+    return false;
 
   }
 
@@ -75,8 +91,9 @@ class HashTable {
 }
 
 const myHashTable = new HashTable(2)
-myHashTable.set("grapes",1000)
+myHashTable.set("apples",1000)
 myHashTable.set("apples",5000)
 myHashTable.set("oranges",5000)
 //myHashTable.get("grapes")
 myHashTable.keys()
+myHashTable.data;
