@@ -1,0 +1,23 @@
+Sql to write all employees name who do not have a manager.
+Sql to write all managers name who do not have an employee under them.
+
+Table  : Manager
+manager_id manager_name
+
+Table : Employee
+employee_id employee_name manager_id
+
+select Employee.employee_name
+from Employee
+left join
+Manager on Employee.manager_id = Manager.manager_id 
+where Employee.manager_id is null;
+
+select * from Employee
+where Employee.manager is null;
+
+select Manager.employee_name
+from Manager
+left join
+Employee on Manager.manager_id = Employee.manager_id 
+where Employee.manager_id is null;

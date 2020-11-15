@@ -1,0 +1,22 @@
+Give a string 
+s1 = "This this is is your programming question Question"
+WAP to  find the  number of occurrence of each word in the given string
+
+public void count words(String str) {
+	
+	String strArray[] = str.split(" ");
+	
+	Map<String, Integer> wordCount = new HashMap<String, Integer>()
+	
+	for(int i=0;i<strArray.length;i++) {
+		
+		if(wordCount.get(strArray)!= null) {
+			wordCount.put(strArray[i],strArraywordCount.getValue(strArray[i] + 1));
+		}
+		else{
+		wordCount.put(strArray[i], 1);
+		}
+	}
+	
+	
+}

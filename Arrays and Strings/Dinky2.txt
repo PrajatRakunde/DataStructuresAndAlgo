@@ -1,0 +1,8 @@
+A string s is a circular rotation of a string t if it matches when the characters are circularly shifted by any number 
+of positions; e.g., ABCDEF is a circular shift of CDEFAB. Write a program that checks whether two given strings are circular shifts of one another.
+
+public boolean checkCircular(String s, String t) {
+
+	for(int i=0;
+
+}
